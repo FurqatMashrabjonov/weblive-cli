@@ -1,0 +1,24 @@
+{
+  "name": "weblive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o build",
+    "package": "pkg . -t macos,linux,windows --output dist/weblive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "node-fetch": "^2.7.0",
+    "pkg": "^5.8.1"
+  },
+  "bin": {
+    "weblive": "./build/index.js"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js"
+  }
+}
